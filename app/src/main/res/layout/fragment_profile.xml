@@ -26,7 +26,8 @@
         android:layout_margin="70px"
         android:background="@drawable/bg_rounded"
         android:padding="13dp"
-        android:text="Name"
+        android:backgroundTint="@color/btn_color"
+        android:text="@string/name"
         android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -39,7 +40,8 @@
         android:layout_margin="70px"
         android:background="@drawable/bg_rounded"
         android:padding="13dp"
-        android:text="Email"
+        android:backgroundTint="@color/btn_color"
+        android:text="@string/email"
         android:textColor="#FFFFFF"
         app:layout_constraintTop_toBottomOf="@+id/myName" />
 
@@ -50,22 +52,25 @@
         android:layout_margin="70px"
         android:background="@drawable/bg_rounded"
         android:padding="13dp"
-        android:text="Id"
+        android:text="@string/id"
+        android:backgroundTint="@color/btn_color"
         android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/myEmail" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/text_profile"
-        android:layout_width="match_parent"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
+        android:background="@drawable/bg_rounded"
         android:layout_marginTop="54px"
         android:text="@string/this_is_profile_fragment"
         android:textAlignment="center"
-        android:textSize="20sp"
+        android:backgroundTint="#FEF7B4"
+        android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/myIds" />
