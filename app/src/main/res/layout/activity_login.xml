@@ -64,6 +64,8 @@
             android:layout_marginStart="32dp"
             android:layout_marginTop="6dp"
             android:layout_marginEnd="32dp"
+            android:backgroundTint="@color/shape"
+            android:background="@drawable/bg_rounded"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/emailTextView"
@@ -100,6 +102,8 @@
             android:layout_marginTop="6dp"
             android:layout_marginEnd="32dp"
             app:endIconMode="password_toggle"
+            android:backgroundTint="@color/shape"
+            android:background="@drawable/bg_rounded"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/passwordTextView"
@@ -189,7 +193,7 @@
                 android:fontFamily="@font/font_1"
                 android:paddingStart="5dp"
                 android:text="Register"
-                android:textColor="@color/btn_color"
+                android:textColor="@color/black"
                 android:textSize="15sp" />
         </LinearLayout>
 
