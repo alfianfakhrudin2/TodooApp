@@ -16,135 +16,110 @@
         app:layout_constraintBottom_toTopOf="@+id/guidelineHorizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="@+id/guidelineHorizontal2"
         app:srcCompat="@drawable/img_regist"
         tools:ignore="ContentDescription" />
 
-    <TextView
-        android:id="@+id/titleTextViewSingup"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="32dp"
-        android:alpha="0"
-        android:fontFamily="@font/font_1"
-        android:text="title_signup"
-        android:textColor="@color/black"
-        android:textSize="13sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guidelineHorizontal"
-        tools:alpha="100" />
+<!--    <TextView-->
+<!--        android:id="@+id/titleTextViewSingup"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="32dp"-->
+<!--        android:layout_marginTop="16dp"-->
+<!--        android:layout_marginEnd="32dp"-->
+<!--        android:alpha="0"-->
+<!--        android:fontFamily="@font/font_1"-->
+<!--        android:text="title_signup"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textSize="13sp"-->
+<!--        android:textStyle="bold"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.0"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/guidelineHorizontal"-->
+<!--        tools:alpha="100" />-->
 
-    <TextView
-        android:id="@+id/nameTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="15dp"
-        android:alpha="0"
-        android:text="@string/name"
-        android:textColor="@color/black"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titleTextViewSingup"
-        tools:alpha="100" />
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/nameEditTextLayout"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="32dp"
-        android:alpha="0"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nameTextView"
-        app:startIconDrawable="@drawable/ic_email"
-        tools:alpha="100">
-
-<!--        <com.example.storyapp.view.customeView.customeUsername-->
-<!--            android:id="@+id/nameEditText"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:ems="10"-->
-<!--            android:fontFamily="@font/font_1"-->
-<!--            android:hint="@string/enter_username"-->
-<!--            android:inputType="text"-->
-<!--            tools:ignore="SpeakableTextPresentCheck,VisualLintTextFieldSize,TextContrastCheck" />-->
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <TextView
-        android:id="@+id/emailTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="15dp"
-        android:alpha="0"
-        android:text="@string/email"
-        android:textColor="@color/black"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nameEditTextLayout"
-        tools:alpha="100" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/emailEditTextLayout"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="5dp"
         android:layout_marginEnd="32dp"
+        android:layout_marginTop="35dp"
         android:alpha="0"
+        android:background="@drawable/bg_rounded"
+        android:backgroundTint="@color/shape"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/emailTextView"
-        app:startIconDrawable="@drawable/ic_email"
+        app:layout_constraintTop_toBottomOf="@+id/guidelineHorizontal"
         tools:alpha="100">
 
-<!--        <com.example.storyapp.view.customeView.customeEmail-->
-<!--            android:id="@+id/emailEditTextSignup"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:ems="10"-->
-<!--            android:fontFamily="@font/font_3"-->
-<!--            android:hint="@string/example_gmail_com"-->
-<!--            android:inputType="text"-->
-<!--            tools:ignore="SpeakableTextPresentCheck,VisualLintTextFieldSize,TextContrastCheck" />-->
+        <EditText
+            android:id="@+id/gmailEditTextSignup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:alpha="0"
+            android:background="@drawable/bg_rounded"
+            android:backgroundTint="@color/shape"
+            android:ems="10"
+            android:fontFamily="@font/font_1"
+            android:hint="Email"
+            android:inputType="textPassword"
+            tools:alpha="100" />
+
+        <!--        <com.example.storyapp.view.customeView.customeEmail-->
+        <!--            android:id="@+id/emailEditTextSignup"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:ems="10"-->
+        <!--            android:fontFamily="@font/font_3"-->
+        <!--            android:hint="@string/example_gmail_com"-->
+        <!--            android:inputType="text"-->
+        <!--            tools:ignore="SpeakableTextPresentCheck,VisualLintTextFieldSize,TextContrastCheck" />-->
     </com.google.android.material.textfield.TextInputLayout>
 
-    <TextView
-        android:id="@+id/passwordTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="15dp"
-        android:alpha="0"
-        android:text="Password"
-        android:textColor="@color/black"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/emailEditTextLayout"
-        tools:alpha="100" />
+<!--    <TextView-->
+<!--        android:id="@+id/passwordTextView"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="32dp"-->
+<!--        android:layout_marginTop="15dp"-->
+<!--        android:alpha="0"-->
+<!--        android:text="Password"-->
+<!--        android:textColor="@color/black"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/emailEditTextLayout"-->
+<!--        tools:alpha="100" />-->
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/passwordEditTextLayout"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="28dp"
         android:layout_marginEnd="32dp"
         android:alpha="0"
         app:endIconMode="password_toggle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/passwordTextView"
-        app:startIconDrawable="@drawable/ic_lock"
+        app:layout_constraintTop_toBottomOf="@+id/emailEditTextLayout"
         tools:alpha="100">
+
+        <EditText
+            android:id="@+id/passwordEditTextSignup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:alpha="0"
+            android:ems="10"
+            android:background="@drawable/bg_rounded"
+            android:fontFamily="@font/font_1"
+            android:backgroundTint="@color/shape"
+            android:hint="Enter Password"
+            android:inputType="textPassword"
+            tools:alpha="100"/>
 
 <!--        <com.example.storyapp.view.customeView.passwordEdt-->
 <!--            android:id="@+id/passwordEditTextSignup"-->
@@ -159,22 +134,65 @@
 <!--            tools:ignore="SpeakableTextPresentCheck,VisualLintTextFieldSize,TextContrastCheck" />-->
     </com.google.android.material.textfield.TextInputLayout>
 
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/idEditTextLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="28dp"
+        android:alpha="0"
+        app:endIconMode="password_toggle"
+        android:background="@drawable/bg_rounded"
+        android:backgroundTint="@color/shape"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passwordEditTextLayout"
+        tools:alpha="100">
+
+        <EditText
+            android:id="@+id/idEditTextSignup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:alpha="0"
+            android:ems="10"
+            android:background="@drawable/bg_rounded"
+            android:fontFamily="@font/font_1"
+            android:backgroundTint="@color/shape"
+            android:hint="Enter ID"
+            android:inputType="textPassword"
+            tools:alpha="100"/>
+
+<!--                <com.example.storyapp.view.customeView.passwordEdt-->
+<!--                    android:id="@+id/passwordEditTextSignup"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:alpha="0"-->
+<!--                    android:ems="10"-->
+<!--                    android:fontFamily="@font/font_3"-->
+<!--                    android:hint="@string/enter_password"-->
+<!--                    android:inputType="textPassword"-->
+<!--                    tools:alpha="100"-->
+<!--                    tools:ignore="SpeakableTextPresentCheck,VisualLintTextFieldSize,TextContrastCheck" />-->
+    </com.google.android.material.textfield.TextInputLayout>
+
     <Button
         android:id="@+id/signupButton"
         android:layout_width="0dp"
-        android:layout_height="64dp"
+        android:layout_height="44dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
         android:alpha="0"
         android:backgroundTint="@color/btn_color"
         android:fontFamily="@font/font_1"
         android:text="Signup"
+        android:layout_marginTop="20dp"
         android:textColor="@color/black"
         android:textSize="17sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/passwordEditTextLayout"
+        app:layout_constraintTop_toBottomOf="@+id/idEditTextLayout"
         tools:alpha="100"
         tools:ignore="VisualLintButtonSize" />
 
@@ -184,16 +202,17 @@
         android:layout_height="64dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintGuide_percent="0.30191082"
+        app:layout_constraintGuide_percent="0.4"
         app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline2"
+        android:id="@+id/guidelineHorizontal2"
         android:layout_width="wrap_content"
         android:layout_height="64dp"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.1" />
-
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintGuide_percent="0.1"
+        app:layout_constraintStart_toStartOf="parent" />
     <ProgressBar
         android:id="@+id/progressBar5"
         style="?android:attr/progressBarStyle"
@@ -224,7 +243,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:fontFamily="@font/font_1"
-            android:text="haveAccount" />
+            android:text="have Account?" />
 
         <TextView
             android:id="@+id/txt_signup"
