@@ -11,8 +11,7 @@
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_centerVertical="true"
-        android:layout_marginTop="30dp"
-        android:layout_marginStart="40dp"
+        android:layout_margin="20dp"
         android:src="@drawable/gmbr_profile"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
