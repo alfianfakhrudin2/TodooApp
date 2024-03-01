@@ -205,7 +205,7 @@
                 android:text="have Account?" />
 
             <TextView
-                android:id="@+id/txt_signup"
+                android:id="@+id/txt_login"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
