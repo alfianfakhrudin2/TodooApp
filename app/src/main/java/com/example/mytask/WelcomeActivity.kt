@@ -4,17 +4,19 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import com.example.mytask.databinding.ActivityLoginBinding
+import com.example.mytask.databinding.ActivityWelcomeBinding
 
 class WelcomeActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityWelcomeBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_welcome)
+        binding = ActivityWelcomeBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         supportActionBar?.hide()
 
-        val button  = findViewById<Button>(R.id.btn_started)
-        button.setOnClickListener {
-            val intent = Intent(this, OnBoardingActivity::class.java)
-            startActivity(intent)
+        binding.btnStarted.setOnClickListener {
+            startActivity(Intent(this, OnBoardingActivity::class.java))
         }
     }
 }
