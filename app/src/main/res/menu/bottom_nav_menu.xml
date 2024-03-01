@@ -14,11 +14,11 @@
     <item
         android:id="@+id/navigation_task"
         android:icon="@drawable/ic_friends"
-        android:title="@string/title_notifications" />
+        android:title="@string/title_Task" />
 
     <item
         android:id="@+id/navigation_profile"
         android:icon="@drawable/account"
-        android:title="@string/title_notifications" />
+        android:title="@string/title_profile" />
 
 </menu>

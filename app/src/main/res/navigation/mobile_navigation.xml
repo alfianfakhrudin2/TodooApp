@@ -20,7 +20,7 @@
     <fragment
         android:id="@+id/navigation_task"
         android:name="com.example.mytask.ui.notifications.TaskFragment"
-        android:label="@string/title_notifications"
+        android:label="@string/title_Task"
         tools:layout="@layout/fragment_task" />
 
     <fragment
