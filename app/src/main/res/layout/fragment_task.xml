@@ -4,31 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.notifications.TaskFragment">
-
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/profile_image"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_centerVertical="true"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="7dp"
-        android:src="@drawable/gmbr_profile"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    tools:context=".ui.task.TaskFragment">
 
     <TextView
-        android:id="@+id/myName"
+        android:id="@+id/text_dashboard"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="6dp"
-        android:backgroundTint="@color/btn_color"
-        android:padding="6dp"
-        android:text="Adil Satrio"
-        android:textSize="18dp"
-        android:textColor="#3C3C3C"
-        app:layout_constraintBottom_toBottomOf="@+id/profile_image"
-        app:layout_constraintStart_toEndOf="@+id/profile_image"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/task"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.search.SearchBar
@@ -37,67 +24,39 @@
         android:layout_height="40dp"
         android:layout_marginHorizontal="16dp"
         android:hint="Search your friends"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/profile_image" />
+        app:layout_constraintTop_toBottomOf="@+id/text_dashboard" />
 
-    <ImageButton
-        android:id="@+id/imageButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/add2"
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_logout"
+        android:layout_width="160dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="30dp"
         android:background="@drawable/bg_rounded"
-        android:backgroundTint="@color/shape"
-        android:layout_marginEnd="15dp"
-        app:layout_constraintTop_toTopOf="@+id/searchBar"
-        app:layout_constraintBottom_toBottomOf="@+id/searchBar"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guidelineHorizontal"
-        android:layout_width="wrap_content"
-        android:layout_height="64dp"
-        android:orientation="horizontal"
+        android:backgroundTint="#FEF7B4"
+        android:text="@string/this_is_profile_fragment"
+        android:textAlignment="center"
+        android:textSize="15sp"
+        android:drawableEnd="@drawable/ic_history"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_logoutt"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintGuide_begin="165dp"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/btn_logoutt" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guidelineHorizontal2"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintGuide_percent="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <com.google.android.material.search.SearchView
-        android:id="@+id/searchView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:hint="hint"
-        app:layout_anchor="@id/searchBar"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_logoutt"
+        android:layout_width="160dp"
+        android:layout_height="45dp"
+        android:background="@drawable/bg_rounded"
+        android:backgroundTint="#FEF7B4"
+        android:drawableEnd="@drawable/ic_add"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="30dp"
+        android:text="@string/this_is_profile_fragment"
+        android:textAlignment="center"
+        android:textSize="15sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/searchBar" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_main"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guidelineHorizontal" />
 
-    <ProgressBar
-        android:id="@+id/progressBar"
-        style="?android:attr/progressBarStyle"
-        android:layout_width="56dp"
-        android:layout_height="56dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

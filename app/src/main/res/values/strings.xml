@@ -12,5 +12,7 @@
     <string name="id">Id</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="task">
+        <b>TASK</b></string>
 
 </resources>

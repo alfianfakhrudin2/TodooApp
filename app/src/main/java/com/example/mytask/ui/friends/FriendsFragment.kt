@@ -1,4 +1,4 @@
-package com.example.mytask.ui.notifications
+package com.example.mytask.ui.friends
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,11 +8,12 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.example.mytask.databinding.FragmentTaskBinding
+import com.example.mytask.databinding.FragmentFriendsBinding
 
-class TaskFragment : Fragment() {
 
-    private var _binding: FragmentTaskBinding? = null
+class FriendsFragment : Fragment() {
+
+    private var _binding: FragmentFriendsBinding? = null
 
 //     This property is only valid between onCreateView and
 //     onDestroyView.
@@ -25,9 +26,9 @@ class TaskFragment : Fragment() {
 
     ): View {
         val notificationsViewModel =
-            ViewModelProvider(this).get(TaskViewModel::class.java)
+            ViewModelProvider(this).get(FriendsViewModel::class.java)
 
-        _binding = FragmentTaskBinding.inflate(inflater, container, false)
+        _binding = FragmentFriendsBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
         val textView: TextView = binding.myName
