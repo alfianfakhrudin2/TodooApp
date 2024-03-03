@@ -7,14 +7,15 @@
     tools:context=".ui.task.TaskFragment">
 
     <TextView
-        android:id="@+id/text_dashboard"
+        android:id="@+id/text_task"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="30dp"
         android:text="@string/task"
         android:textAlignment="center"
-        android:textSize="18sp"
+        android:textSize="28sp"
+        android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -26,13 +27,13 @@
         android:hint="Search your friends"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_dashboard" />
+        app:layout_constraintTop_toBottomOf="@+id/text_task" />
 
     <Button
         android:id="@+id/btn_logout"
-        android:layout_width="150dp"
+        android:layout_width="170dp"
         android:layout_height="38dp"
-        android:layout_marginEnd="30dp"
+        android:layout_marginEnd="20dp"
         android:background="@drawable/bg_rounded"
         android:backgroundTint="@color/shape"
         android:text="@string/history"
@@ -46,14 +47,14 @@
 
     <Button
         android:id="@+id/btn_logoutt"
-        android:layout_width="150dp"
+        android:layout_width="170dp"
         android:layout_height="38dp"
         android:background="@drawable/bg_rounded"
         android:backgroundTint="@color/shape"
         android:paddingEnd="20dp"
         android:drawableEnd="@drawable/ic_add"
         android:layout_marginTop="24dp"
-        android:layout_marginStart="30dp"
+        android:layout_marginStart="20dp"
         android:textColor="@color/black"
         android:text="@string/add_task"
         android:textAlignment="center"

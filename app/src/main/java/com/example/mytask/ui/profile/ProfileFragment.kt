@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import androidx.appcompat.app.AppCompatActivity
 import com.example.mytask.LoginActivity
 import com.example.mytask.R
 
@@ -34,6 +35,9 @@ class ProfileFragment : Fragment() {
             // Memulai Activity baru
             startActivity(intent)
         }
-
+    }
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        (activity as AppCompatActivity?)?.supportActionBar?.hide()
     }
 }
