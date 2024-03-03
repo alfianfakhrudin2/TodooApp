@@ -28,14 +28,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_dashboard" />
 
-    <androidx.appcompat.widget.AppCompatButton
+    <Button
         android:id="@+id/btn_logout"
-        android:layout_width="160dp"
-        android:layout_height="45dp"
+        android:layout_width="150dp"
+        android:layout_height="38dp"
         android:layout_marginEnd="30dp"
         android:background="@drawable/bg_rounded"
-        android:backgroundTint="#FEF7B4"
-        android:text="@string/this_is_profile_fragment"
+        android:backgroundTint="@color/shape"
+        android:text="@string/history"
+        android:textColor="@color/black"
         android:textAlignment="center"
         android:textSize="15sp"
         android:drawableEnd="@drawable/ic_history"
@@ -43,16 +44,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/btn_logoutt" />
 
-    <androidx.appcompat.widget.AppCompatButton
+    <Button
         android:id="@+id/btn_logoutt"
-        android:layout_width="160dp"
-        android:layout_height="45dp"
+        android:layout_width="150dp"
+        android:layout_height="38dp"
         android:background="@drawable/bg_rounded"
-        android:backgroundTint="#FEF7B4"
+        android:backgroundTint="@color/shape"
+        android:paddingEnd="20dp"
         android:drawableEnd="@drawable/ic_add"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="24dp"
         android:layout_marginStart="30dp"
-        android:text="@string/this_is_profile_fragment"
+        android:textColor="@color/black"
+        android:text="@string/add_task"
         android:textAlignment="center"
         android:textSize="15sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -73,7 +76,7 @@
         android:layout_height="64dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintGuide_begin="210dp"
+        app:layout_constraintGuide_begin="190dp"
         app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.constraintlayout.widget.Guideline
