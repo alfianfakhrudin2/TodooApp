@@ -17,5 +17,8 @@
     <string name="history">History</string>
     <string name="title_friends">Friends</string>
     <string name="icon_back">icon back</string>
+    <string name="add_friends">Add Friends</string>
+    <string name="search_your_friends">Search your friends</string>
+    <string name="add">ADD</string>
 
 </resources>

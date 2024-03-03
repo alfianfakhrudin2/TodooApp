@@ -24,7 +24,7 @@
     <fragment
         android:id="@+id/navigation_friends"
         android:name="com.example.mytask.ui.friends.FriendsFragment"
-        android:label="@string/title_Task"
+        android:label="@string/title_task"
         tools:layout="@layout/fragment_friends" />
 
     <fragment
