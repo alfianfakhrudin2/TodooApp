@@ -20,5 +20,8 @@
     <string name="add_friends">Add Friends</string>
     <string name="search_your_friends">Search your friends</string>
     <string name="add">ADD</string>
+    <string name="gambar">gambar</string>
+    <string name="txt_login">Login</string>
+    <string name="password">Password</string>
 
 </resources>

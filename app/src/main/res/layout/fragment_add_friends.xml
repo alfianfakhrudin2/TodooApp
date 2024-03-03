@@ -65,10 +65,9 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:textSize="20dp"
+            android:textSize="20sp"
             android:textColor="@color/black"
-            android:textFontWeight="700"
-            android:text="ID"
+            android:text="@string/id"
             android:buttonTint="@color/btn_color"/>
 
         <RadioButton
@@ -76,10 +75,9 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:textSize="20dp"
+            android:textSize="20sp"
             android:textColor="@color/black"
-            android:textFontWeight="700"
-            android:text="Email"
+            android:text="@string/email"
             android:buttonTint="@android:color/white"/>
     </RadioGroup>
 
