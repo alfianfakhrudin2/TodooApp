@@ -9,16 +9,15 @@
     <item
         android:id="@+id/navigation_dashboard"
         android:icon="@drawable/ic_task"
-        android:title="@string/title_dashboard" />
+        android:title="@string/title_Task" />
 
     <item
         android:id="@+id/navigation_task"
         android:icon="@drawable/ic_friends"
-        android:title="@string/title_Task" />
+        android:title="@string/title_friends" />
 
     <item
         android:id="@+id/navigation_profile"
         android:icon="@drawable/account"
         android:title="@string/title_profile" />
-
 </menu>

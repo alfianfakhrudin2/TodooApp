@@ -12,7 +12,7 @@
         android:layout_height="80dp"
         android:layout_centerVertical="true"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="7dp"
+        android:layout_marginTop="30dp"
         android:src="@drawable/gmbr_profile"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -25,11 +25,11 @@
         android:backgroundTint="@color/btn_color"
         android:padding="6dp"
         android:text="Adil Satrio"
-        android:textSize="18dp"
         android:textColor="#3C3C3C"
+        android:textSize="18dp"
         app:layout_constraintBottom_toBottomOf="@+id/profile_image"
         app:layout_constraintStart_toEndOf="@+id/profile_image"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/profile_image" />
 
     <com.google.android.material.search.SearchBar
         android:id="@+id/searchBar"

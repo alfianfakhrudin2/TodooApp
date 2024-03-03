@@ -28,4 +28,10 @@
         android:name="com.example.mytask.ui.profile.ProfileFragment"
         android:label="@string/title_profile"
         tools:layout="@layout/fragment_profile"/>
+
+        <fragment
+        android:id="@+id/navigation_add_task"
+        android:name="com.example.mytask.ui.addTask.AddTaskFragment"
+        android:label="@string/title_profile"
+        tools:layout="@layout/fragment_profile"/>
 </navigation>

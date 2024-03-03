@@ -16,5 +16,6 @@
         <b>TASK</b></string>
     <string name="add_task">Add Task</string>
     <string name="history">History</string>
+    <string name="title_friends">Friends</string>
 
 </resources>
