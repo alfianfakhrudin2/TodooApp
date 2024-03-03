@@ -11,6 +11,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.Navigation
+import androidx.navigation.fragment.findNavController
 import com.example.mytask.R
 import com.example.mytask.databinding.FragmentTaskBinding
 
@@ -18,46 +20,35 @@ import com.example.mytask.ui.addTask.AddTaskFragment
 
 class TaskFragment : Fragment() {
 
-    private lateinit var binding: FragmentTaskBinding
+    private var _binding: FragmentTaskBinding? = null
+    private val binding get() = _binding!!
+
+    private lateinit var taskViewModel: TaskViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
-        savedInstanceState: Bundle?
+        savedInstanceState: Bundle?,
     ): View {
-        val dashboardViewModel =
-            ViewModelProvider(this).get(TaskViewModel::class.java)
+        _binding = FragmentTaskBinding.inflate(inflater, container, false)
+        return binding.root
+    }
 
-        binding = FragmentTaskBinding.inflate(inflater, container, false)
-        val root: View = binding.root
-
-        val textView = binding.textTask
-        dashboardViewModel.text.observe(viewLifecycleOwner) {
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        taskViewModel = ViewModelProvider(this).get(TaskViewModel::class.java)
+        val textView: TextView = binding.textTask
+        taskViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
         }
 
         binding.btnTask.setOnClickListener {
-            // Panggil fungsi untuk berpindah ke AddTaskFragment
-            navigateToAddTaskFragment()
+            addTaskFragment()
         }
-
-        return root
     }
 
-    private fun navigateToAddTaskFragment() {
-        // Buat instance dari AddTaskFragment
-        val addTaskFragment = AddTaskFragment()
-
-        // Mulai transaksi fragment
-        val transaction: FragmentTransaction = requireActivity().supportFragmentManager.beginTransaction()
-
-        // Ganti containerFragment dengan id dari container tempat AddTaskFragment akan ditampilkan
-        transaction.replace(R.id.container, addTaskFragment)
-
-        // (Opsional) Tambahkan ke back stack, sehingga dapat kembali ke TaskFragment jika diperlukan
-        transaction.addToBackStack(null)
-
-        // Jalankan transaksi
-        transaction.commit()
+    private fun addTaskFragment() {
+        findNavController().navigate(R.id.action_navigation_task_to_addTaskFragment)
     }
+
 }
