@@ -9,11 +9,14 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.mytask.databinding.FragmentHomeBinding
+import com.example.mytask.ui.adapter.Horizontal_RecyclerView
 
 class HomeFragment : Fragment() {
 
     private var _binding: FragmentHomeBinding? = null
 
+    private lateinit var recyclerView: Horizontal_RecyclerView
+    private lateinit var adapter: Horizontal_RecyclerView
     // This property is only valid between onCreateView and
     // onDestroyView.
     private val binding get() = _binding!!
@@ -36,10 +39,16 @@ class HomeFragment : Fragment() {
         return root
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding.recyclerViewHorizontal.adapter = Horizontal_RecyclerView()
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         (activity as AppCompatActivity?)?.supportActionBar?.hide()
     }
+
 
     override fun onDestroyView() {
         super.onDestroyView()

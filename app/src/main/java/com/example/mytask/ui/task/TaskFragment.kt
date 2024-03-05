@@ -51,4 +51,9 @@ class TaskFragment : Fragment() {
         findNavController().navigate(R.id.action_navigation_task_to_addTaskFragment)
     }
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        (activity as AppCompatActivity?)?.supportActionBar?.hide()
+    }
+
 }
