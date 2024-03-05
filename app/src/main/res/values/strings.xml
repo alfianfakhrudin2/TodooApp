@@ -24,5 +24,6 @@
     <string name="txt_login">Login</string>
     <string name="password">Password</string>
     <string name="notification">Notification</string>
+    <string name="sistem_pakar">Sistem Pakar</string>
 
 </resources>
