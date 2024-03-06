@@ -169,6 +169,7 @@
         android:layout_marginTop="0dp"
         android:layout_marginBottom="10dp"
         android:spinnersShown="true"
+        android:background="@color/shape"
         android:theme="@style/ThemeOverlay.App.DatePicker"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
