@@ -10,10 +10,33 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.mytask.databinding.FragmentHomeBinding
 import com.example.mytask.ui.adapter.Horizontal_RecyclerView
+import com.google.android.material.datepicker.MaterialDatePicker
+import com.google.android.material.datepicker.MaterialPickerOnPositiveButtonClickListener
+import com.google.android.material.snackbar.Snackbar
+import java.util.Calendar
+import java.util.TimeZone
+
 
 class HomeFragment : Fragment() {
 
+    private val snackbar: Snackbar? = null
+    private val today: Long = 0
+    private val nextMonth: Long = 0
+    private val janThisYear: Long = 0
+    private val decThisYear: Long = 0
+    private val oneYearForward: Long = 0
+    private val todayPair: Pair<Long, Long>? = null
+    private val nextMonthPair: Pair<Long, Long>? = null
+
     private var _binding: FragmentHomeBinding? = null
+
+    private fun getClearedUtc(): Calendar {
+        val utc: Calendar = Calendar.getInstance(TimeZone.getTimeZone("UTC"))
+        utc.clear()
+        return utc
+    }
+
+//    val datePicker = MaterialDatePicker.Builder.datePicker().build()
 
     private lateinit var recyclerView: Horizontal_RecyclerView
     private lateinit var adapter: Horizontal_RecyclerView
@@ -32,6 +55,10 @@ class HomeFragment : Fragment() {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
+//        binding.btnOpenDatePicker.setOnClickListener {
+//            showDatePicker()
+//        }
+
         val textView: TextView = binding.myName
         homeViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
@@ -39,14 +66,31 @@ class HomeFragment : Fragment() {
         return root
     }
 
+
+    private fun showDatePicker() {
+        val builder = MaterialDatePicker.Builder.datePicker()
+        builder.setTitleText("Select Date")
+
+        val picker = builder.build()
+
+        picker.addOnPositiveButtonClickListener(
+            MaterialPickerOnPositiveButtonClickListener { selection ->
+                // Handle the selected date
+                val selectedDate = picker.headerText
+                // Do something with the selected date
+            })
+    }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.recyclerViewHorizontal.adapter = Horizontal_RecyclerView()
+
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         (activity as AppCompatActivity?)?.supportActionBar?.hide()
+
     }
 
 

@@ -46,7 +46,7 @@
         android:id="@+id/cardView"
         android:layout_width="350dp"
         android:layout_height="130dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         app:cardBackgroundColor="@color/shape"
         app:cardCornerRadius="15dp"
         app:cardElevation="1dp"
@@ -92,7 +92,7 @@
         android:layout_height="64dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintGuide_begin="99dp"
+        app:layout_constraintGuide_begin="90dp"
         app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.constraintlayout.widget.Guideline
@@ -110,7 +110,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="16dp"
         android:fontFamily="@font/font_1"
         android:text="ON GOING"
         android:textColor="@color/black"
@@ -123,7 +123,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="2dp"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
@@ -145,12 +145,33 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/recyclerViewHorizontal" />
 
-    <DatePicker
+<!--    <com.google.android.material.button.MaterialButton-->
+<!--        android:id="@+id/btnOpenDatePicker"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Open DatePicker"-->
+<!--        android:textColor="@color/black"-->
+<!--        app:icon="@drawable/ic_chat"-->
+<!--        app:iconPadding="8dp"-->
+<!--        app:iconSize="24dp"-->
+<!--        app:iconTint="@color/white"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/txtCalendar" />-->
+
+    <CalendarView
+        android:id="@+id/datePicker"
         android:layout_width="wrap_content"
-        android:layout_height="340dp"
+        android:layout_height="0dp"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="10dp"
+        android:spinnersShown="true"
+        android:theme="@style/ThemeOverlay.App.DatePicker"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtCalendar" />
 
