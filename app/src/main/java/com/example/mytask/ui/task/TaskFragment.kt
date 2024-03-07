@@ -15,15 +15,15 @@ import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
 import com.example.mytask.R
 import com.example.mytask.databinding.FragmentTaskBinding
-
-import com.example.mytask.ui.addTask.AddTaskFragment
+import com.example.mytask.ui.adapter.Friends_Adapter
+import com.example.mytask.ui.adapter.Task_Adapter
 
 class TaskFragment : Fragment() {
 
     private var _binding: FragmentTaskBinding? = null
     private val binding get() = _binding!!
 
-    private lateinit var taskViewModel: TaskViewModel
+//    private lateinit var taskViewModel: TaskViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -36,19 +36,27 @@ class TaskFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        taskViewModel = ViewModelProvider(this).get(TaskViewModel::class.java)
-        val textView: TextView = binding.textTask
-        taskViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
-        }
+//        taskViewModel = ViewModelProvider(this).get(TaskViewModel::class.java)
+//        val textView: TextView = binding.textTask
+//        taskViewModel.text.observe(viewLifecycleOwner) {
+//            textView.text = it
+//        }
+        binding.rvTask.adapter = Task_Adapter()
 
         binding.btnTask.setOnClickListener {
             addTaskFragment()
+        }
+        binding.btnHistory.setOnClickListener {
+            HistoryFragment()
         }
     }
 
     private fun addTaskFragment() {
         findNavController().navigate(R.id.action_navigation_task_to_addTaskFragment)
+    }
+
+    private fun HistoryFragment() {
+        findNavController().navigate(R.id.action_navigation_task_to_historyFragment)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

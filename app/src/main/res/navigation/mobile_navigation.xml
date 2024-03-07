@@ -19,13 +19,20 @@
         <action
             android:id="@+id/action_navigation_task_to_addTaskFragment"
             app:destination="@id/addTaskFragment" />
+        <action
+            android:id="@+id/action_navigation_task_to_historyFragment"
+            app:destination="@id/historyFragment" />
     </fragment>
 
     <fragment
         android:id="@+id/navigation_friends"
         android:name="com.example.mytask.ui.friends.FriendsFragment"
         android:label="@string/title_task"
-        tools:layout="@layout/fragment_friends" />
+        tools:layout="@layout/fragment_friends" >
+        <action
+            android:id="@+id/action_navigation_friends_to_addFriendsFragment"
+            app:destination="@id/addFriendsFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_profile"
@@ -37,6 +44,16 @@
         android:name="com.example.mytask.ui.addTask.AddTaskFragment"
         android:label="fragment_add_task"
         tools:layout="@layout/fragment_add_task" />
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.example.mytask.ui.history.HistoryFragment"
+        android:label="fragment_history"
+        tools:layout="@layout/fragment_history" />
+    <fragment
+        android:id="@+id/addFriendsFragment"
+        android:name="com.example.mytask.ui.addFriends.AddFriendsFragment"
+        android:label="fragment_add_friends"
+        tools:layout="@layout/fragment_add_friends" />
 
     <!--    <fragment-->
 <!--        android:id="@+id/navigation_add_task"-->

@@ -19,15 +19,6 @@ import java.util.TimeZone
 
 class HomeFragment : Fragment() {
 
-    private val snackbar: Snackbar? = null
-    private val today: Long = 0
-    private val nextMonth: Long = 0
-    private val janThisYear: Long = 0
-    private val decThisYear: Long = 0
-    private val oneYearForward: Long = 0
-    private val todayPair: Pair<Long, Long>? = null
-    private val nextMonthPair: Pair<Long, Long>? = null
-
     private var _binding: FragmentHomeBinding? = null
 
     private fun getClearedUtc(): Calendar {
@@ -38,8 +29,6 @@ class HomeFragment : Fragment() {
 
 //    val datePicker = MaterialDatePicker.Builder.datePicker().build()
 
-    private lateinit var recyclerView: Horizontal_RecyclerView
-    private lateinit var adapter: Horizontal_RecyclerView
     // This property is only valid between onCreateView and
     // onDestroyView.
     private val binding get() = _binding!!

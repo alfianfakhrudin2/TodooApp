@@ -8,7 +8,13 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
+import com.example.mytask.R
 import com.example.mytask.databinding.FragmentFriendsBinding
+
+
+import com.example.mytask.ui.adapter.Friends_Adapter
+import com.example.mytask.ui.adapter.Horizontal_RecyclerView
 
 
 class FriendsFragment : Fragment() {
@@ -36,6 +42,19 @@ class FriendsFragment : Fragment() {
             textView.text = it
         }
         return root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding.rvfriends.adapter = Friends_Adapter()
+
+        binding.btnAddFriends.setOnClickListener {
+            addFriendsFragment()
+        }
+    }
+
+    private fun addFriendsFragment() {
+        findNavController().navigate(R.id.addFriendsFragment)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

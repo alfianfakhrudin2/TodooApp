@@ -26,7 +26,6 @@ class LoginActivity : AppCompatActivity() {
         auth = FirebaseAuth.getInstance()
         auth = Firebase.auth
 
-
 //        customToken?.let { token ->
 //            auth.signInWithCustomToken(token)
 //                .addOnCompleteListener(this) { task ->
