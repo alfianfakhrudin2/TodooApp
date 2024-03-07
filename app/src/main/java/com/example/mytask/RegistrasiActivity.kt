@@ -30,9 +30,7 @@ class RegistrasiActivity : AppCompatActivity() {
             } else {
                 Toast.makeText(this, "Isi semua kolom", Toast.LENGTH_SHORT).show()
             }
-
         }
-
         binding.txtLogin.setOnClickListener {
             startActivity(Intent(this, LoginActivity::class.java))
         }
