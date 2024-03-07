@@ -8,35 +8,6 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:223169067491:android:62d0b15dfefe73ada108d6",
-        "android_client_info": {
-          "package_name": "com.example.firebase"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "223169067491-h9g94hhlgmadspcgpr3b4jp9s0tvhrku.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyDUWRHFOJmn2F7xvHEvBhJAVyabCU7-d_I"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "223169067491-h9g94hhlgmadspcgpr3b4jp9s0tvhrku.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
         "mobilesdk_app_id": "1:223169067491:android:d657bb86d8576c1fa108d6",
         "android_client_info": {
           "package_name": "com.example.latihan_firebase"
