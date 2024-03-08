@@ -6,12 +6,29 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.mytask.R
+import com.example.mytask.databinding.FragmentNotificationBinding
+import com.example.mytask.ui.adapter.History_Adapter
+import com.example.mytask.ui.home.HomeFragment
+
 
 class NotificationFragment : Fragment() {
 
-    companion object {
-        fun newInstance() = NotificationFragment()
+    private var _binding: FragmentNotificationBinding? = null
+    private val binding get() = _binding!!
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
+        _binding = FragmentNotificationBinding.inflate(inflater, container, false)
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding.rvNotification.adapter = History_Adapter()
+        binding.imageButton2 .setOnClickListener {
+            HomeFragment()
+        }
     }
 
     private val viewModel: NotificationViewModel by viewModels()
@@ -22,10 +39,4 @@ class NotificationFragment : Fragment() {
         // TODO: Use the ViewModel
     }
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
-        return inflater.inflate(R.layout.fragment_notification, container, false)
-    }
 }

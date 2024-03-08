@@ -12,6 +12,7 @@ import com.example.mytask.R
 import com.example.mytask.databinding.FragmentHistoryBinding
 
 import com.example.mytask.ui.adapter.History_Adapter
+import com.example.mytask.ui.adapter.Task_Adapter
 
 class HistoryFragment : Fragment() {
 
@@ -33,7 +34,7 @@ class HistoryFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        binding.rvHistory.adapter = History_Adapter()
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

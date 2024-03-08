@@ -8,8 +8,12 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
+import com.example.mytask.R
 import com.example.mytask.databinding.FragmentHomeBinding
 import com.example.mytask.ui.adapter.Horizontal_RecyclerView
+import com.example.mytask.ui.history.HistoryFragment
+import com.example.mytask.ui.notification.NotificationFragment
 import com.google.android.material.datepicker.MaterialDatePicker
 import com.google.android.material.datepicker.MaterialPickerOnPositiveButtonClickListener
 import com.google.android.material.snackbar.Snackbar
@@ -73,7 +77,13 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.recyclerViewHorizontal.adapter = Horizontal_RecyclerView()
+        binding.btnNotifikasi.setOnClickListener {
+            NotificationFragment()
+        }
+    }
 
+    private fun NotificationFragment() {
+        findNavController().navigate(R.id.btnNotifikasi)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

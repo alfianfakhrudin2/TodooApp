@@ -32,7 +32,7 @@
         app:layout_constraintTop_toTopOf="@+id/profile_image" />
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/btnNotifikasi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="20dp"
