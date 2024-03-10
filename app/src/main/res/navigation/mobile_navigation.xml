@@ -47,22 +47,39 @@
         android:id="@+id/addTaskFragment"
         android:name="com.example.mytask.ui.addTask.AddTaskFragment"
         android:label="fragment_add_task"
-        tools:layout="@layout/fragment_add_task" />
+        tools:layout="@layout/fragment_add_task" >
+        <action
+            android:id="@+id/btnAddTask"
+            app:destination="@id/navigation_task" />
+    </fragment>
     <fragment
         android:id="@+id/historyFragment"
         android:name="com.example.mytask.ui.history.HistoryFragment"
         android:label="fragment_history"
-        tools:layout="@layout/fragment_history" />
+        tools:layout="@layout/fragment_history" >
+        <action
+            android:id="@+id/btnHistory"
+            app:destination="@id/navigation_task" />
+    </fragment>
     <fragment
         android:id="@+id/addFriendsFragment"
         android:name="com.example.mytask.ui.addFriends.AddFriendsFragment"
         android:label="fragment_add_friends"
-        tools:layout="@layout/fragment_add_friends" />
+        tools:layout="@layout/fragment_add_friends" >
+        <action
+            android:id="@+id/btnAddFriends"
+            app:destination="@id/navigation_friends" />
+    </fragment>
     <fragment
         android:id="@+id/notificationFragment"
         android:name="com.example.mytask.ui.notification.NotificationFragment"
         android:label="fragment_notification"
-        tools:layout="@layout/fragment_notification" />
+        tools:layout="@layout/fragment_notification" >
+        <action
+            android:id="@+id/BtnBack"
+            app:destination="@id/navigation_home" />
+
+    </fragment>
 
     <!--    <fragment-->
 <!--        android:id="@+id/navigation_add_task"-->

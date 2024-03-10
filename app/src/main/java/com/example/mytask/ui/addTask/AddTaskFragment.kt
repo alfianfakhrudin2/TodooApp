@@ -5,27 +5,36 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.example.mytask.R
+import com.example.mytask.databinding.FragmentAddTaskBinding
 
-/**
- * A simple [Fragment] subclass.
- * Use the [AddTaskFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
+
 class AddTaskFragment : Fragment() {
 
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-    }
+    private var _binding: FragmentAddTaskBinding? = null
+    private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_add_task, container, false)
+        _binding = FragmentAddTaskBinding.inflate(inflater, container, false)
+        val root: View = binding.root
+        return root
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        binding.btnAddTask.setOnClickListener {
+            TaskFragment()
+        }
+    }
+
+    private fun TaskFragment() {
+        findNavController().navigate(R.id.btnAddTask)
+    }
 }

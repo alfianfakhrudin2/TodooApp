@@ -11,7 +11,7 @@
         android:layout_height="match_parent">
 
         <ImageButton
-            android:id="@+id/imageButton2"
+            android:id="@+id/btnHistory"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
@@ -29,9 +29,9 @@
             android:textSize="24sp"
             android:textColor="@color/black"
             android:layout_marginStart="30dp"
-            app:layout_constraintBottom_toBottomOf="@+id/imageButton2"
-            app:layout_constraintStart_toEndOf="@+id/imageButton2"
-            app:layout_constraintTop_toTopOf="@+id/imageButton2" />
+            app:layout_constraintBottom_toBottomOf="@+id/btnHistory"
+            app:layout_constraintStart_toEndOf="@+id/btnHistory"
+            app:layout_constraintTop_toTopOf="@+id/btnHistory" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guidelineHorizontal"

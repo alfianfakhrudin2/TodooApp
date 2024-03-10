@@ -8,11 +8,13 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import com.example.mytask.R
 import com.example.mytask.databinding.FragmentHistoryBinding
 
 import com.example.mytask.ui.adapter.History_Adapter
 import com.example.mytask.ui.adapter.Task_Adapter
+import com.example.mytask.ui.task.TaskFragment
 
 class HistoryFragment : Fragment() {
 
@@ -35,6 +37,14 @@ class HistoryFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.rvHistory.adapter = History_Adapter()
+
+        binding.btnHistory.setOnClickListener {
+            TaskFragment()
+        }
+    }
+
+    private fun TaskFragment() {
+        findNavController().navigate(R.id.btnHistory)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

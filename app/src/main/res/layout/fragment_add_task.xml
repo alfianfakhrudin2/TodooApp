@@ -8,7 +8,7 @@
     tools:context=".ui.addTask.AddTaskFragment">
 
     <ImageButton
-        android:id="@+id/imageButton2"
+        android:id="@+id/btnAddTask"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
@@ -26,9 +26,9 @@
         android:textSize="24sp"
         android:textColor="@color/black"
         android:layout_marginStart="30dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageButton2"
-        app:layout_constraintStart_toEndOf="@+id/imageButton2"
-        app:layout_constraintTop_toTopOf="@+id/imageButton2" />
+        app:layout_constraintBottom_toBottomOf="@+id/btnAddTask"
+        app:layout_constraintStart_toEndOf="@+id/btnAddTask"
+        app:layout_constraintTop_toTopOf="@+id/btnAddTask" />
 
     <!-- TODO: Update blank fragment layout -->
     <com.google.android.material.textfield.TextInputLayout

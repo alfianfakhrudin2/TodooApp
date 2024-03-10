@@ -91,8 +91,7 @@ class HomeFragment : Fragment() {
         (activity as AppCompatActivity?)?.supportActionBar?.hide()
 
     }
-
-
+    
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null

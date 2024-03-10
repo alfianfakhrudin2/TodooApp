@@ -6,13 +6,15 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.example.mytask.R
+import com.example.mytask.databinding.FragmentAddFriendsBinding
+import com.example.mytask.ui.friends.FriendsFragment
 
 class AddFriendsFragment : Fragment() {
 
-    companion object {
-        fun newInstance() = AddFriendsFragment()
-    }
+    private var _binding: FragmentAddFriendsBinding? = null
+    private val binding get() = _binding!!
 
     private val viewModel: AddFriendsViewModel by viewModels()
 
@@ -26,6 +28,19 @@ class AddFriendsFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        return inflater.inflate(R.layout.fragment_add_friends, container, false)
+        _binding = FragmentAddFriendsBinding.inflate(inflater, container, false)
+        val root: View = binding.root
+        return root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding.btnAddFriends.setOnClickListener {
+            FriendsFragment()
+        }
+    }
+
+    private fun FriendsFragment() {
+        findNavController().navigate(R.id.btnAddFriends)
     }
 }
