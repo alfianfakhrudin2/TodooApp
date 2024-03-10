@@ -6,8 +6,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
+import com.example.mytask.R
 import com.example.mytask.databinding.FragmentNotificationBinding
-import com.example.mytask.ui.adapter.History_Adapter
+import com.example.mytask.ui.adapter.Notifikasi_Adapter
 import com.example.mytask.ui.home.HomeFragment
 
 
@@ -25,10 +27,15 @@ class NotificationFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.rvNotification.adapter = History_Adapter()
-        binding.imageButton2 .setOnClickListener {
+        binding.rvNotification.adapter = Notifikasi_Adapter()
+
+        binding.BtnBack.setOnClickListener {
             HomeFragment()
         }
+    }
+
+    private fun HomeFragment() {
+        findNavController().navigate(R.id.btnNotifikasi)
     }
 
     private val viewModel: NotificationViewModel by viewModels()

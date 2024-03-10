@@ -23,7 +23,8 @@
             android:exported="false" />
         <activity
             android:name=".OnBoardingActivity"
-            android:exported="false" >
+            android:exported="false"
+            >
         </activity>
         <activity
             android:name=".WelcomeActivity"
