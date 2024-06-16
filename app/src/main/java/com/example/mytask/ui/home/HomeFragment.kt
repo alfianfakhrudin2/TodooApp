@@ -52,10 +52,10 @@ class HomeFragment : Fragment() {
 //            showDatePicker()
 //        }
 
-        val textView: TextView = binding.myName
-        homeViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
-        }
+//        val textView: TextView = binding.myName
+//        homeViewModel.text.observe(viewLifecycleOwner) {
+//            textView.text = it
+//        }
         return root
     }
 

@@ -8,9 +8,9 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="310dp"
-        android:layout_height="300dp"
-        android:src="@drawable/welcome"
+        android:layout_width="239dp"
+        android:layout_height="324dp"
+        android:src="@drawable/img_welcome"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guidelineHorizontal2" />
@@ -19,7 +19,7 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Simplify Your Life Amplify Your Achievements"
+        android:text="@string/desc_welcome_screen"
         android:textAlignment="center"
         android:textSize="23dp"
         android:textColor="#303030"
@@ -39,8 +39,8 @@
         android:backgroundTint="@color/btn_color"
         android:text="Get Started"
         android:fontFamily="@font/font_1"
-        android:alpha="0.8"
-        android:textFontWeight="800"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
         android:layout_marginTop="40dp"
         android:textAlignment="center"
         android:textSize="16sp"
@@ -63,7 +63,7 @@
         android:layout_height="84dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintGuide_percent="0.2"
+        app:layout_constraintGuide_percent="0.13"
         app:layout_constraintStart_toStartOf="parent" />
 
 

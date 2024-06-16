@@ -8,7 +8,7 @@
     tools:context=".ui.addTask.AddTaskFragment">
 
     <ImageButton
-        android:id="@+id/btnAddTask"
+        android:id="@+id/btnback"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
@@ -20,35 +20,34 @@
         android:contentDescription="@string/icon_back" />
 
     <TextView
+        android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/add_task"
-        android:textSize="24sp"
-        android:textColor="@color/black"
         android:layout_marginStart="30dp"
-        app:layout_constraintBottom_toBottomOf="@+id/btnAddTask"
-        app:layout_constraintStart_toEndOf="@+id/btnAddTask"
-        app:layout_constraintTop_toTopOf="@+id/btnAddTask" />
+        android:text="@string/add_task"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnback"
+        app:layout_constraintStart_toEndOf="@+id/btnback"
+        app:layout_constraintTop_toTopOf="@+id/btnback" />
 
-    <!-- TODO: Update blank fragment layout -->
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/courseEditTextLayout"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="350dp"
+        android:layout_height="60dp"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="40dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/btnback">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/courseEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/bg_rounded"
-            android:backgroundTint="@color/btn_color"
+            android:background="@drawable/bg_card"
             android:ems="10"
             android:fontFamily="@font/font_1"
             android:hint="Course"
@@ -59,8 +58,8 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/lecturerEditTextLayoutt"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="350dp"
+        android:layout_height="60dp"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
         android:layout_marginTop="17dp"
@@ -72,8 +71,7 @@
             android:id="@+id/lecturerEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/bg_rounded"
-            android:backgroundTint="@color/btn_color"
+            android:background="@drawable/bg_card"
             android:ems="10"
             android:fontFamily="@font/font_1"
             android:hint="Lecturer"
@@ -81,45 +79,89 @@
             tools:ignore="SpeakableTextPresentCheck,TextContrastCheck,VisualLintTextFieldSize" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/deadlineEditTextLayout"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginTop="17dp"
+    <RelativeLayout
+        android:id="@+id/lvdate"
+        android:layout_width="350dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lecturerEditTextLayoutt">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/deadlineEditText"
+        <TextView
+            android:id="@+id/tvSelectedDate"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/bg_rounded"
-            android:backgroundTint="@color/btn_color"
-            android:ems="10"
-            android:fontFamily="@font/font_1"
-            android:hint="Deadline"
-            android:inputType="textEmailAddress"
-            tools:ignore="SpeakableTextPresentCheck,TextContrastCheck,VisualLintTextFieldSize" />
-    </com.google.android.material.textfield.TextInputLayout>
+            android:layout_height="60dp"
+            android:background="@drawable/bg_card"
+            android:padding="10dp"
+            android:paddingStart="17dp"
+            android:paddingEnd="40dp"
+            android:text="Deadline"
+            android:textSize="18sp" />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_logout"
-        android:layout_width="match_parent"
+        <ImageButton
+            android:id="@+id/btnSelectDate"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="16dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Select Date"
+            android:src="@drawable/ic_calendar" />
+
+    </RelativeLayout>
+
+<!--    <com.google.android.material.button.MaterialButton-->
+<!--        android:id="@+id/menu_button"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Show Menu"-->
+<!--        app:iconGravity="textStart"-->
+<!--        app:iconPadding="8dp"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/btn_add_task"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/lvdate" />-->
+
+    <Button
+        android:id="@+id/btnAddTask"
+        android:layout_width="319dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="38dp"
-        android:layout_marginEnd="38dp"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/bg_rounded"
-        android:backgroundTint="#FEF7B4"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:backgroundTint="#800000"
         android:text="@string/add_task"
+        android:layout_marginTop="30dp"
         android:textAlignment="center"
-        android:textSize="15sp"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/deadlineEditTextLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lvdate">
+
+        <AutoCompleteTextView
+            android:id="@+id/autoCompleteTextView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_card"
+            android:inputType="none"
+            android:text="English" />
+
+    </com.google.android.material.textfield.TextInputLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

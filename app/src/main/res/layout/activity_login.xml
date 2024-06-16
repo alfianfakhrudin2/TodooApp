@@ -6,19 +6,10 @@
     android:layout_height="match_parent"
     tools:context=".LoginActivity">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:context=".view.login.LoginActivity">
-
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:layout_width="406dp"
+            android:layout_height="194dp"
             android:layout_marginStart="32dp"
             android:layout_marginEnd="32dp"
             android:contentDescription="@string/gambar"
@@ -28,34 +19,18 @@
             app:layout_constraintTop_toTopOf="@+id/guidelineHorizontal2"
             app:srcCompat="@drawable/img_login" />
 
-        <TextView
-            android:id="@+id/titleTextViewLogin"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="32dp"
-            android:fontFamily="@font/font_1"
-            android:text="@string/txt_login"
-            android:textColor="@color/black"
-            android:textSize="22sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/guidelineHorizontal" />
-
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/emailEditTextLayout"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
             android:layout_marginStart="32dp"
-            android:layout_marginTop="6dp"
+            android:layout_marginTop="30dp"
             android:layout_marginEnd="32dp"
+            android:textColorHint="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/titleTextViewLogin">
+            app:layout_constraintTop_toBottomOf="@+id/guidelineHorizontal">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/edtEmail"
@@ -67,29 +42,20 @@
                 android:hint="@string/email"
                 android:backgroundTint="@color/shape"
                 android:inputType="textEmailAddress"
+                android:textSize="15sp"
                 tools:ignore="SpeakableTextPresentCheck,TextContrastCheck,VisualLintTextFieldSize" />
         </com.google.android.material.textfield.TextInputLayout>
 
-<!--        <TextView-->
-<!--            android:id="@+id/passwordTextView"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginStart="32dp"-->
-<!--            android:layout_marginTop="10dp"-->
-<!--            android:text="Password"-->
-<!--            android:textColor="@color/black"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintTop_toBottomOf="@+id/emailEditTextLayout" />-->
-
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/passwordEditTextLayout"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            style="@style/CustomTextInputLayout"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
             android:layout_marginStart="32dp"
-            android:layout_marginTop="28dp"
+            android:layout_marginTop="16dp"
             android:layout_marginEnd="32dp"
             app:endIconMode="password_toggle"
+            android:textColorHint="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/emailEditTextLayout">
@@ -103,8 +69,8 @@
                 android:hint="@string/password"
                 android:background="@drawable/bg_rounded"
                 android:backgroundTint="@color/shape"
-                android:inputType="textPassword"
-                tools:ignore="SpeakableTextPresentCheck,TextContrastCheck,VisualLintTextFieldSize" />
+                android:inputType="textVisiblePassword"
+                android:textSize="15sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
@@ -112,35 +78,35 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="24dp"
             android:layout_marginEnd="32dp"
             android:backgroundTint="@color/btn_color"
             android:fontFamily="@font/font_1"
             android:text="Login"
-            android:textColor="@color/black"
-            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/passwordEditTextLayout"
             tools:ignore="VisualLintButtonSize" />
 
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guidelineHorizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="64dp"
-            android:orientation="horizontal"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintGuide_percent="0.4"
-            app:layout_constraintStart_toStartOf="parent" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineHorizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="64dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintGuide_percent="0.44"
+        app:layout_constraintStart_toStartOf="parent" />
 
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guidelineHorizontal2"
-            android:layout_width="wrap_content"
-            android:layout_height="64dp"
-            android:orientation="horizontal"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintGuide_percent="0.1"
-            app:layout_constraintStart_toStartOf="parent" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineHorizontal2"
+        android:layout_width="wrap_content"
+        android:layout_height="64dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintGuide_percent="0.06"
+        app:layout_constraintStart_toStartOf="parent" />
 
         <ProgressBar
             android:id="@+id/progressBar5"
@@ -169,8 +135,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:textSize="15sp"
                 android:fontFamily="@font/font_1"
-                android:text="Don't have account?" />
+                android:text="Don't have an account?" />
 
             <TextView
                 android:id="@+id/txt_signup"
@@ -183,7 +150,4 @@
                 android:textColor="@color/black"
                 android:textSize="15sp" />
         </LinearLayout>
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.mytask.R
 import com.example.mytask.databinding.FragmentAddFriendsBinding
+
 import com.example.mytask.ui.friends.FriendsFragment
 
 class AddFriendsFragment : Fragment() {

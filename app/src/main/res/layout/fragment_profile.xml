@@ -11,9 +11,9 @@
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/profile_image"
         android:layout_width="199dp"
-        android:layout_height="189dp"
+        android:layout_height="220dp"
         android:layout_centerVertical="true"
-        android:src="@drawable/gmbr_profile"
+        android:src="@drawable/img_profile"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginTop="40dp"
@@ -26,44 +26,65 @@
         android:layout_marginEnd="30dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="50dp"
-        android:background="@drawable/bg_rounded"
+        android:background="@drawable/bg_card"
         android:padding="13dp"
-        android:backgroundTint="@color/btn_color"
-        android:text="@string/name"
-        android:textColor="#FFFFFF"
+        android:text="Adil Satrio Darma Prasojo"
+        android:fontFamily="@font/poppins_regular"
+        android:textSize="16sp"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/profile_image" />
 
-    <TextView
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/myEmail"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="30dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="25dp"
-        android:background="@drawable/bg_rounded"
-        android:padding="13dp"
-        android:backgroundTint="@color/btn_color"
-        android:text="@string/email"
-        android:textColor="#FFFFFF"
-        app:layout_constraintTop_toBottomOf="@+id/myName" />
-
-    <TextView
-        android:id="@+id/myIds"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="30dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="25dp"
-        android:background="@drawable/bg_rounded"
-        android:padding="13dp"
-        android:text="@string/id"
-        android:backgroundTint="@color/btn_color"
-        android:textColor="#FFFFFF"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        app:endIconMode="password_toggle"
+        android:textColorHint="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/myEmail" />
+        app:layout_constraintTop_toBottomOf="@+id/myName">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:fontFamily="@font/poppins_regular"
+            android:hint="***********"
+            android:background="@drawable/bg_card"
+            android:inputType="textVisiblePassword"
+            android:textSize="15sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/myIds"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        app:endIconMode="password_toggle"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myEmail">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtIds"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:fontFamily="@font/poppins_regular"
+            android:hint="******"
+            android:background="@drawable/bg_card"
+            android:inputType="textVisiblePassword"
+            android:textSize="15sp" />
+    </com.google.android.material.textfield.TextInputLayout>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_logout"
@@ -74,9 +95,12 @@
         android:background="@drawable/bg_rounded"
         android:layout_marginTop="84px"
         android:text="@string/this_is_profile_fragment"
+        android:fontFamily="@font/poppins_regular"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
         android:textAlignment="center"
-        android:backgroundTint="#FEF7B4"
-        android:textSize="15sp"
+        android:backgroundTint="#800000"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/myIds" />

@@ -5,7 +5,7 @@
     android:layout_height="127dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardCornerRadius="20dp"
-    android:backgroundTint="@color/shape"
+    android:backgroundTint="@color/bg_card"
     android:layout_margin="10dp"
     app:cardElevation="6dp">
 
@@ -21,15 +21,16 @@
             android:text="@string/sistem_pakar"
             android:layout_marginStart="10dp"
             android:textColor="#000000"
-            android:textSize="20sp"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="18sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
             android:id="@+id/ivImage"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="4dp"
             android:layout_marginEnd="20dp"
             android:src="@drawable/ic_friendsadd"
             app:layout_constraintEnd_toStartOf="@+id/imageView2"
@@ -37,8 +38,8 @@
 
         <ImageView
             android:id="@+id/imageView2"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
             android:layout_marginTop="4dp"
             android:layout_marginEnd="10dp"
             android:src="@drawable/ic_chat"
@@ -72,7 +73,7 @@
             android:layout_marginBottom="9dp"
             android:text="Acimah Sidauruk"
             android:textColor="#000000"
-            android:textSize="16sp"
+            android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/guidelineHorizontal2" />
@@ -83,9 +84,9 @@
             android:layout_marginTop="54dp"
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="9dp"
-            android:text="100%"
+            android:text="60%"
             android:textColor="#000000"
-            android:textSize="16sp"
+            android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/guidelineHorizontal2" />

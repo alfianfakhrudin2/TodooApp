@@ -13,12 +13,12 @@
         android:layout_centerVertical="true"
         android:layout_marginStart="20dp"
         android:layout_marginTop="30dp"
-        android:src="@drawable/gmbr_profile"
+        android:src="@drawable/img_profile"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/myName"
+        android:id="@+id/name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="6dp"
@@ -31,62 +31,87 @@
         app:layout_constraintStart_toEndOf="@+id/profile_image"
         app:layout_constraintTop_toTopOf="@+id/profile_image" />
 
-    <ImageButton
+    <ImageView
+        android:layout_width="21dp"
+        android:layout_height="21dp"
+        android:contentDescription="TODO"
+        android:src="@drawable/ic_add_task"
+        android:layout_marginEnd="14dp"
+        app:layout_constraintBottom_toBottomOf="@+id/name"
+        app:layout_constraintEnd_toStartOf="@+id/btnNotifikasi"
+        app:layout_constraintTop_toTopOf="@+id/name" />
+
+    <ImageView
         android:id="@+id/btnNotifikasi"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="21dp"
+        android:layout_height="21dp"
         android:layout_marginEnd="20dp"
-        android:backgroundTint="@color/white"
-        android:src="@drawable/ic_notifikasi"
-        app:layout_constraintBottom_toBottomOf="@+id/myName"
+        android:contentDescription="TODO"
+        android:src="@drawable/ic_notif"
+        app:layout_constraintBottom_toBottomOf="@+id/name"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/myName" />
+        app:layout_constraintTop_toTopOf="@+id/name" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
         android:layout_width="350dp"
         android:layout_height="130dp"
-        android:layout_marginTop="5dp"
-        app:cardBackgroundColor="@color/shape"
-        app:cardCornerRadius="15dp"
-        app:cardElevation="1dp"
+        android:layout_marginTop="10dp"
+        app:cardCornerRadius="10dp"
+        android:backgroundTint="@color/bg_card"
         app:layout_constraintCircleRadius="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guidelineHorizontal" >
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:padding="10dp">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_card"
+        android:padding="10dp">
 
-            <TextView
-                android:id="@+id/textView4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="THIS WEEK"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="THIS WEEK"
+            android:fontFamily="@font/font_1"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="You have 9 tasks to do"
-                android:textColor="@color/black"
-                android:layout_marginTop="60dp"
-                android:textSize="15sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="60dp"
+            android:fontFamily="@font/font_1"
+            android:text="3/5 Task"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+        <ImageView
+            android:layout_width="148dp"
+            android:layout_height="135dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/img_baner"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-        
-    </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <androidx.constraintlayout.widget.Guideline
+</androidx.cardview.widget.CardView>
+
+
+<androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineHorizontal"
         android:layout_width="wrap_content"
         android:layout_height="64dp"
@@ -144,21 +169,6 @@
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/recyclerViewHorizontal" />
-
-<!--    <com.google.android.material.button.MaterialButton-->
-<!--        android:id="@+id/btnOpenDatePicker"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:text="Open DatePicker"-->
-<!--        android:textColor="@color/black"-->
-<!--        app:icon="@drawable/ic_chat"-->
-<!--        app:iconPadding="8dp"-->
-<!--        app:iconSize="24dp"-->
-<!--        app:iconTint="@color/white"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/txtCalendar" />-->
 
     <CalendarView
         android:id="@+id/datePicker"

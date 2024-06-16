@@ -25,5 +25,14 @@
     <string name="password">Password</string>
     <string name="notification">Notification</string>
     <string name="sistem_pakar">Sistem Pakar</string>
+    <string name="desc_welcome_screen">Simplify Your Life Amplify \nYour Achievements</string>
+    <string name="desc_onboarding_screen">Start Your Day with \nOrganized Tasks</string>
+    <string name="chat">Chat</string>
+
+        <!-- Other string resources -->
+        <string-array name="language">
+            <item>Individual</item>
+            <item>Group</item>
+        </string-array>
 
 </resources>
