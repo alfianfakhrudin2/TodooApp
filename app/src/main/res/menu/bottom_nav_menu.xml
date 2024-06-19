@@ -1,23 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
         android:id="@+id/navigation_home"
-        android:icon="@drawable/ic_home"
-        android:title="@string/title_home" />
+        android:icon="@drawable/ic_selector_home"
+        app:iconTint="@color/nav_item_color"
+        android:title="@string/title_home"
+        app:titleTextColor="@color/nav_item_color"/>
 
     <item
         android:id="@+id/navigation_task"
-        android:icon="@drawable/ic_task"
-        android:title="@string/title_task" />
+        android:icon="@drawable/ic_selector_task"
+        app:iconTint="@color/nav_item_color"
+        android:title="@string/title_task"
+        app:titleTextColor="@color/nav_item_color"/>
 
     <item
         android:id="@+id/navigation_friends"
-        android:icon="@drawable/ic_friends"
-        android:title="@string/title_friends" />
+        android:icon="@drawable/ic_selector_friends"
+        app:iconTint="@color/nav_item_color"
+        android:title="@string/title_friends"
+        app:titleTextColor="@color/nav_item_color"/>
 
     <item
         android:id="@+id/navigation_profile"
-        android:icon="@drawable/account"
-        android:title="@string/title_profile" />
+        android:icon="@drawable/ic_selector_profile"
+        app:iconTint="@color/nav_item_color"
+        android:title="@string/title_profile"
+        app:titleTextColor="@color/nav_item_color"/>
 </menu>

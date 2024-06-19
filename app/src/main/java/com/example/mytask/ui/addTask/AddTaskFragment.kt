@@ -16,6 +16,7 @@ import com.example.mytask.R
 import com.example.mytask.databinding.FragmentAddTaskBinding
 import com.google.android.material.datepicker.MaterialDatePicker
 import com.google.android.material.textfield.MaterialAutoCompleteTextView
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -60,6 +61,15 @@ class AddTaskFragment : Fragment() {
         btnAddTask.setOnClickListener {
             showSuccessAlertDialog()
         }
+
+        // Set up the "Back" button click listener
+        binding.btnKembali.setOnClickListener {
+            findNavController().popBackStack()
+        }
+
+        // Hide the bottom navigation bar
+        val bottomNav: BottomNavigationView? = activity?.findViewById(R.id.nav_view)
+        bottomNav?.visibility = View.GONE
     }
 
     private fun showDatePickerDialog() {
@@ -90,11 +100,11 @@ class AddTaskFragment : Fragment() {
         // Set the adapter to the MaterialAutoCompleteTextView
         autoCompleteTextView.setAdapter(adapter)
 
-        // Set the listener for when an item is selected
-        autoCompleteTextView.setOnItemClickListener { parent, _, position, _ ->
-            val selectedItem = parent.getItemAtPosition(position).toString()
-            tvSelectedItem.text = selectedItem
-        }
+//        // Set the listener for when an item is selected
+//        autoCompleteTextView.setOnItemClickListener { parent, _, position, _ ->
+//            val selectedItem = parent.getItemAtPosition(position).toString()
+//            tvSelectedItem.text = selectedItem
+//        }
     }
 
     private fun showSuccessAlertDialog() {
@@ -120,7 +130,7 @@ class AddTaskFragment : Fragment() {
         btnLanjutkanLogin.setOnClickListener {
             alertDialog.dismiss()
             // Navigate to TaskFragment using NavController
-            findNavController().navigate(R.id.navigation_task)
+            findNavController().popBackStack()
         }
 
         alertDialog.show()
@@ -129,5 +139,9 @@ class AddTaskFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+
+        // Show the bottom navigation bar when leaving the fragment
+        val bottomNav: BottomNavigationView? = activity?.findViewById(R.id.nav_view)
+        bottomNav?.visibility = View.VISIBLE
     }
 }

@@ -14,12 +14,16 @@
     </style>
 
     <style name="ThemeOverlay.App.DatePicker" parent="@style/ThemeOverlay.Material3.MaterialCalendar">
-        <item name="colorPrimary">@color/light_blue_900</item>
-        <item name="colorOnPrimary">@color/purple_200</item>
         <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.App.SmallComponent</item>
         <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.App.MediumComponent</item>
         <!-- Customize text field of the text input mode. -->
 <!--        <item name="textInputStyle">@style/Widget.App.TextInputLayout</item>-->
+    </style>
+
+    <style name="Widget.MyTask.BottomNavigationView" parent="Widget.MaterialComponents.BottomNavigationView.Colored">
+        <item name="itemIconTint">@color/nav_item_color</item>
+        <item name="itemTextColor">@color/nav_item_color</item>
+        <item name="backgroundColor">@android:color/white</item> <!-- Adjust as needed -->
     </style>
     <style name="CustomTextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
         <item name="endIconTint">@color/white</item>

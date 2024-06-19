@@ -35,7 +35,7 @@ class NotificationFragment : Fragment() {
     }
 
     private fun HomeFragment() {
-        findNavController().navigate(R.id.BtnBack)
+        findNavController().popBackStack()
     }
 
     private val viewModel: NotificationViewModel by viewModels()

@@ -11,8 +11,7 @@
     <string name="id">Id</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
-    <string name="title_task">
-        <b>TASK</b></string>
+    <string name="title_task">Task</string>
     <string name="add_task">Add Task</string>
     <string name="history">History</string>
     <string name="title_friends">Friends</string>
@@ -29,10 +28,30 @@
     <string name="desc_onboarding_screen">Start Your Day with \nOrganized Tasks</string>
     <string name="chat">Chat</string>
 
-        <!-- Other string resources -->
-        <string-array name="language">
-            <item>Individual</item>
-            <item>Group</item>
-        </string-array>
+    <!-- Other string resources -->
+    <string-array name="language">
+        <item>Individual</item>
+        <item>Group</item>
+    </string-array>
+
+    <string-array name="data_photo_friends">
+        <item>@drawable/img_friends</item>
+        <item>@drawable/img_friends1</item>
+        <item>@drawable/img_friends2</item>
+        <item>@drawable/img_friends3</item>
+        <item>@drawable/img_friends4</item>
+        <item>@drawable/img_friends5</item>
+        <item>@drawable/img_friends6</item>
+    </string-array>
+
+    <string-array name="name_friends">
+        <item>Desirae Philips</item>
+        <item>Cheyenne Torff</item>
+        <item>Ruben Bergson</item>
+        <item>Desirae Philips</item>
+        <item>Alfonso Rhiel Madsen</item>
+        <item>Brandon Bator</item>
+        <item>Terry George</item>
+    </string-array>
 
 </resources>

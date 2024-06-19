@@ -44,7 +44,7 @@ class HistoryFragment : Fragment() {
     }
 
     private fun TaskFragment() {
-        findNavController().navigate(R.id.btnHistory)
+        findNavController().popBackStack()
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

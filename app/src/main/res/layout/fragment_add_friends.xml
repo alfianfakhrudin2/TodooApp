@@ -7,7 +7,7 @@
     tools:context=".ui.addFriends.AddFriendsFragment">
 
     <ImageButton
-        android:id="@+id/btnAddFriends"
+        android:id="@+id/btnBackAddFriends"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
@@ -26,9 +26,9 @@
         android:text="@string/add_friends"
         android:textColor="@color/black"
         android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="@+id/btnAddFriends"
-        app:layout_constraintStart_toEndOf="@+id/btnAddFriends"
-        app:layout_constraintTop_toTopOf="@+id/btnAddFriends" />
+        app:layout_constraintBottom_toBottomOf="@+id/btnBackAddFriends"
+        app:layout_constraintStart_toEndOf="@+id/btnBackAddFriends"
+        app:layout_constraintTop_toTopOf="@+id/btnBackAddFriends" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineHorizontal"

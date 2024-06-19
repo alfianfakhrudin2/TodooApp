@@ -4,6 +4,10 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
 
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -23,28 +27,22 @@
             android:exported="false" />
         <activity
             android:name=".OnBoardingActivity"
-            android:exported="false"
-            >
-        </activity>
+            android:exported="false"/>
         <activity
             android:name=".WelcomeActivity"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-
-        <!-- <meta-data -->
+        </activity> <!-- <meta-data -->
         <!-- android:name="com.google.android.actions" -->
         <!-- android:resource="@xml/bg_rounded" /> -->
         <activity
             android:name=".MainActivity"
-            android:exported="true"
-            android:label="@string/app_name">
-
-        </activity>
+            android:exported="false"
+            android:label="@string/app_name"/>
     </application>
 
 </manifest>

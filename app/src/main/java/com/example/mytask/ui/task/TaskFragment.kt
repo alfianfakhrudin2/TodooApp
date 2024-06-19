@@ -49,6 +49,7 @@ class TaskFragment : Fragment() {
         binding.btnHistory.setOnClickListener {
             HistoryFragment()
         }
+
     }
 
     private fun addTaskFragment() {

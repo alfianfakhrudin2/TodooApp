@@ -36,12 +36,12 @@ class AddFriendsFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.btnAddFriends.setOnClickListener {
+        binding.btnBackAddFriends.setOnClickListener {
             FriendsFragment()
         }
     }
 
     private fun FriendsFragment() {
-        findNavController().navigate(R.id.btnAddFriends)
+        findNavController().navigate(R.id.navigation_friends)
     }
 }

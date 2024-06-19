@@ -1,20 +1,21 @@
-package com.example.mytask.ui.friends
+package com.example.mytask.ui.newGroup
 
 import android.os.Bundle
+import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.mytask.R
 import com.example.mytask.databinding.FragmentFriendsBinding
+import com.example.mytask.databinding.FragmentNewGroupBinding
 import com.example.mytask.ui.adapter.Friends_Adapter
 import com.example.mytask.ui.model.modelFriends
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
-class FriendsFragment : Fragment() {
 
-    private var _binding: FragmentFriendsBinding? = null
+class newGroupFragment : Fragment() {
+    private var _binding: FragmentNewGroupBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -22,31 +23,28 @@ class FriendsFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentFriendsBinding.inflate(inflater, container, false)
+        _binding = FragmentNewGroupBinding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // Initialize RecyclerView adapter
         val friendsAdapter = Friends_Adapter(requireActivity(), getListFriends(), object : Friends_Adapter.OnItemClickListener {
             override fun onItemClick(item: modelFriends) {
                 // Handle item click
                 // For example, navigate to a detailed view of the friend
             }
         })
+
         binding.rvfriends.adapter = friendsAdapter
 
-        // Handle Add Friends button click
-        binding.btnAddFriends.setOnClickListener {
-            addFriendsFragment()
+        binding.imageViewBack.setOnClickListener {
+            findNavController().popBackStack()
         }
 
-        // Handle Add Group button click
-        binding.btnAddGroup.setOnClickListener {
-            startNewGroupFragment()
-        }
+        val bottomNav: BottomNavigationView? = activity?.findViewById(R.id.nav_view)
+        bottomNav?.visibility = View.GONE
     }
 
     private fun getListFriends(): ArrayList<modelFriends> {
@@ -66,21 +64,7 @@ class FriendsFragment : Fragment() {
         return listKursus
     }
 
-    private fun addFriendsFragment() {
-        findNavController().navigate(R.id.addFriendsFragment)
-    }
-
-    private fun startNewGroupFragment() {
-        findNavController().navigate(R.id.navigation_new_group)
-    }
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        (activity as AppCompatActivity?)?.supportActionBar?.hide()
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
+    companion object {
+          fun newInstance() = newGroupFragment()
     }
 }

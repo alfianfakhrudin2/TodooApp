@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
@@ -12,11 +11,8 @@ import androidx.navigation.fragment.findNavController
 import com.example.mytask.R
 import com.example.mytask.databinding.FragmentHomeBinding
 import com.example.mytask.ui.adapter.Horizontal_RecyclerView
-import com.example.mytask.ui.history.HistoryFragment
-import com.example.mytask.ui.notification.NotificationFragment
 import com.google.android.material.datepicker.MaterialDatePicker
 import com.google.android.material.datepicker.MaterialPickerOnPositiveButtonClickListener
-import com.google.android.material.snackbar.Snackbar
 import java.util.Calendar
 import java.util.TimeZone
 
@@ -80,16 +76,26 @@ class HomeFragment : Fragment() {
         binding.btnNotifikasi.setOnClickListener {
             NotificationFragment()
         }
+        binding.btnTambahTask.setOnClickListener {
+            AddTaskFragment1()
+        }
     }
 
     private fun NotificationFragment() {
-        findNavController().navigate(R.id.btnNotifikasi)
+        findNavController().navigate(R.id.action_navigation_home_to_notification)
+    }
+//
+//    private fun AddTaskFragment() {
+//        findNavController().navigate(R.id.btnTambahTask)
+//    }
+
+    private fun AddTaskFragment1() {
+        findNavController().navigate(R.id.action_navigation_home_to_add_task)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         (activity as AppCompatActivity?)?.supportActionBar?.hide()
-
     }
     
     override fun onDestroyView() {
