@@ -29,6 +29,9 @@
         <action
             android:id="@+id/action_navigation_task_to_historyFragment"
             app:destination="@id/historyFragment" />
+        <action
+            android:id="@+id/action_navigation_task_to_chatFragment"
+            app:destination="@id/navigation_chatFragment" />
     </fragment>
 
     <fragment
@@ -85,7 +88,6 @@
         <action
             android:id="@+id/action_navigation_new_group_to_navigation_home"
             app:destination="@id/navigation_home" />
-
     </fragment>
 
     <fragment
@@ -106,6 +108,45 @@
         <action
             android:id="@+id/action_createFragment_to_navigation_home"
             app:destination="@id/navigation_home" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigationDetailchatFragment"
+        android:name="com.example.mytask.ui.detailChat.DetailChatFragment"
+        android:label="fragment_detail_chat"
+        tools:layout="@layout/fragment_detail_chat" >
+        <action
+            android:id="@+id/action_navigation_detailchat_to_chat"
+            app:destination="@id/navigation_chatFragment" />
+    </fragment>
+
+<!--    <fragment-->
+<!--        android:id="@+id/navigation_task"-->
+<!--        android:name="com.example.mytask.ui.task.TaskFragment"-->
+<!--        android:label="@string/title_dashboard"-->
+<!--        tools:layout="@layout/fragment_task" >-->
+<!--        <action-->
+<!--            android:id="@+id/action_navigation_task_to_addTaskFragment"-->
+<!--            app:destination="@id/navigation_add_task" />-->
+<!--        <action-->
+<!--            android:id="@+id/action_navigation_task_to_historyFragment"-->
+<!--            app:destination="@id/historyFragment" />-->
+<!--        <action-->
+<!--            android:id="@+id/action_navigation_task_to_chatFragment"-->
+<!--            app:destination="@id/navigation_chatFragment" />-->
+<!--    </fragment>-->
+
+    <fragment
+        android:id="@+id/navigation_chatFragment"
+        android:name="com.example.mytask.ui.chat.ChatFragment"
+        android:label="fragment_chat"
+        tools:layout="@layout/fragment_chat" >
+        <action
+            android:id="@+id/action_navigation_chat_to_task"
+            app:destination="@id/navigation_task" />
+        <action
+            android:id="@+id/action_navigation_chat_to_detailChatFragment"
+            app:destination="@id/navigationDetailchatFragment" />
     </fragment>
 
 </navigation>

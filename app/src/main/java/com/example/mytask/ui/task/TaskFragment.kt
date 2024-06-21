@@ -17,6 +17,7 @@ import com.example.mytask.R
 import com.example.mytask.databinding.FragmentTaskBinding
 import com.example.mytask.ui.adapter.Friends_Adapter
 import com.example.mytask.ui.adapter.Task_Adapter
+import com.example.mytask.ui.chat.ChatFragment
 
 class TaskFragment : Fragment() {
 
@@ -49,6 +50,9 @@ class TaskFragment : Fragment() {
         binding.btnHistory.setOnClickListener {
             HistoryFragment()
         }
+        binding.btnChat.setOnClickListener {
+            ChatFragment()
+        }
 
     }
 
@@ -58,6 +62,10 @@ class TaskFragment : Fragment() {
 
     private fun HistoryFragment() {
         findNavController().navigate(R.id.action_navigation_task_to_historyFragment)
+    }
+
+    private fun ChatFragment() {
+        findNavController().navigate(R.id.navigation_chatFragment)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
