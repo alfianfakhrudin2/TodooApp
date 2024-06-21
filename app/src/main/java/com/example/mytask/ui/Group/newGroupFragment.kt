@@ -1,4 +1,4 @@
-package com.example.mytask.ui.newGroup
+package com.example.mytask.ui.Group
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.mytask.R
-import com.example.mytask.databinding.FragmentFriendsBinding
 import com.example.mytask.databinding.FragmentNewGroupBinding
 import com.example.mytask.ui.adapter.Friends_Adapter
 import com.example.mytask.ui.model.modelFriends
@@ -43,8 +42,16 @@ class newGroupFragment : Fragment() {
             findNavController().popBackStack()
         }
 
+        binding.fabAdd.setOnClickListener {
+            startCreateGroup()
+        }
+
         val bottomNav: BottomNavigationView? = activity?.findViewById(R.id.nav_view)
         bottomNav?.visibility = View.GONE
+    }
+
+    private fun startCreateGroup() {
+        findNavController().navigate(R.id.navigation_create_group)
     }
 
     private fun getListFriends(): ArrayList<modelFriends> {
@@ -64,7 +71,12 @@ class newGroupFragment : Fragment() {
         return listKursus
     }
 
-    companion object {
-          fun newInstance() = newGroupFragment()
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+
+        // Show the bottom navigation bar when leaving the fragment
+        val bottomNav: BottomNavigationView? = activity?.findViewById(R.id.nav_view)
+        bottomNav?.visibility = View.VISIBLE
     }
 }

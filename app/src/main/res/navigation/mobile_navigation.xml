@@ -79,9 +79,13 @@
 
     <fragment
         android:id="@+id/navigation_new_group"
-        android:name="com.example.mytask.ui.newGroup.newGroupFragment"
+        android:name="com.example.mytask.ui.Group.newGroupFragment"
         android:label="@string/title_task"
         tools:layout="@layout/fragment_new_group" >
+        <action
+            android:id="@+id/action_navigation_new_group_to_navigation_home"
+            app:destination="@id/navigation_home" />
+
     </fragment>
 
     <fragment
@@ -91,6 +95,16 @@
         tools:layout="@layout/fragment_notification" >
         <action
             android:id="@+id/action_notification_to_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_create_group"
+        android:name="com.example.mytask.ui.Group.CreateGroupFragment"
+        android:label="fragment_create_group"
+        tools:layout="@layout/fragment_create_group" >
+        <action
+            android:id="@+id/action_createFragment_to_navigation_home"
             app:destination="@id/navigation_home" />
     </fragment>
 

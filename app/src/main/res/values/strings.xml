@@ -27,6 +27,7 @@
     <string name="desc_welcome_screen">Simplify Your Life Amplify \nYour Achievements</string>
     <string name="desc_onboarding_screen">Start Your Day with \nOrganized Tasks</string>
     <string name="chat">Chat</string>
+    <string name="title_chat">Inferensi Forward Chaining/Backward \nChaining</string>
 
     <!-- Other string resources -->
     <string-array name="language">
