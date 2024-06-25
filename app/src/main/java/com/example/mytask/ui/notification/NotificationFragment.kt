@@ -9,8 +9,11 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.mytask.R
 import com.example.mytask.databinding.FragmentNotificationBinding
+import com.example.mytask.ui.adapter.Friends_Adapter
 import com.example.mytask.ui.adapter.Notifikasi_Adapter
 import com.example.mytask.ui.home.HomeFragment
+import com.example.mytask.ui.model.modelFriends
+import com.example.mytask.ui.model.modelNotifikasi
 
 
 class NotificationFragment : Fragment() {
@@ -27,11 +30,32 @@ class NotificationFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.rvNotification.adapter = Notifikasi_Adapter()
+
+        binding.rvNotification.adapter = Notifikasi_Adapter( requireActivity(), getListNotifikasi(), object : Notifikasi_Adapter.OnItemClickListener {
+            override fun onItemClick(item: modelNotifikasi) {
+                // Handle item click
+                // For example, navigate to a detailed view of the friend
+            }
+        })
 
         binding.BtnBack.setOnClickListener {
             HomeFragment()
         }
+
+    }
+
+    private fun getListNotifikasi(): ArrayList<modelNotifikasi> {
+        val dataTitles = resources.getStringArray(R.array.desc_notifikasi)
+
+        val listNotification = ArrayList<modelNotifikasi>()
+        for (i in dataTitles.indices) {
+            val kursus = modelNotifikasi(
+                dataTitles[i],
+            )
+            listNotification.add(kursus)
+        }
+        // Recycle the typed array
+        return listNotification
     }
 
     private fun HomeFragment() {
@@ -39,11 +63,5 @@ class NotificationFragment : Fragment() {
     }
 
     private val viewModel: NotificationViewModel by viewModels()
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-        // TODO: Use the ViewModel
-    }
 
 }

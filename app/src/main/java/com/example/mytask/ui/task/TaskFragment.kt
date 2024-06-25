@@ -18,6 +18,9 @@ import com.example.mytask.databinding.FragmentTaskBinding
 import com.example.mytask.ui.adapter.Friends_Adapter
 import com.example.mytask.ui.adapter.Task_Adapter
 import com.example.mytask.ui.chat.ChatFragment
+import com.example.mytask.ui.model.modelTask
+import com.google.android.material.bottomnavigation.BottomNavigationView
+import java.util.ArrayList
 
 class TaskFragment : Fragment() {
 
@@ -42,7 +45,15 @@ class TaskFragment : Fragment() {
 //        taskViewModel.text.observe(viewLifecycleOwner) {
 //            textView.text = it
 //        }
-        binding.rvTask.adapter = Task_Adapter()
+
+        val taskAdapter = Task_Adapter(requireActivity(), getListTask(), object : Task_Adapter.OnItemClickListener {
+            override fun onItemClick(item: modelTask) {
+                // Handle item click
+                // For example, navigate to a detailed view of the friend
+            }
+        })
+
+        binding.rvTask.adapter = taskAdapter
 
         binding.btnTask.setOnClickListener {
             addTaskFragment()
@@ -54,6 +65,27 @@ class TaskFragment : Fragment() {
             ChatFragment()
         }
 
+        val bottomNav: BottomNavigationView? = activity?.findViewById(R.id.nav_view)
+        bottomNav?.visibility = View.VISIBLE
+
+    }
+
+    private fun getListTask(): ArrayList<modelTask> {
+        val dataTitles = resources.getStringArray(R.array.title_task)
+        val dataDesc = resources.getStringArray(R.array.desc_task)
+        val dataStatus = resources.getStringArray(R.array.presentes_task)
+
+
+        val listNotification = ArrayList<modelTask>()
+        for (i in dataTitles.indices) {
+            val kursus = modelTask(
+                dataTitles[i],
+                dataDesc[i],
+                dataStatus[i],
+            )
+            listNotification.add(kursus)
+        }
+        return listNotification
     }
 
     private fun addTaskFragment() {
@@ -65,7 +97,7 @@ class TaskFragment : Fragment() {
     }
 
     private fun ChatFragment() {
-        findNavController().navigate(R.id.navigation_chatFragment)
+        findNavController().navigate(R.id.action_navigation_task_to_chatFragment)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -73,4 +105,9 @@ class TaskFragment : Fragment() {
         (activity as AppCompatActivity?)?.supportActionBar?.hide()
     }
 
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
 }

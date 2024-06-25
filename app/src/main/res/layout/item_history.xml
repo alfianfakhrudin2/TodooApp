@@ -5,9 +5,8 @@
     android:layout_height="127dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardCornerRadius="20dp"
-    android:backgroundTint="@color/btn_color"
-    android:layout_margin="10dp"
-    app:cardElevation="6dp">
+    android:background="@drawable/bg_card"
+    android:layout_margin="10dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"

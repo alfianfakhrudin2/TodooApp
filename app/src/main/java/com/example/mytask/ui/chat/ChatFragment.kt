@@ -10,7 +10,6 @@ import com.example.mytask.R
 import com.example.mytask.databinding.FragmentChatBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
-
 class ChatFragment : Fragment() {
     private var _binding: FragmentChatBinding? = null
     private val binding get() = _binding!!
@@ -30,19 +29,12 @@ class ChatFragment : Fragment() {
             findNavController().popBackStack()
         }
         binding.constraintLayout.setOnClickListener {
-            findNavController().navigate(R.id.navigationDetailchatFragment)
+            findNavController().navigate(R.id.action_navigation_chat_to_detailChatFragment)
         }
-        val bottomNav: BottomNavigationView? = activity?.findViewById(R.id.nav_view)
-        bottomNav?.visibility = View.GONE
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
-
-        // Show the bottom navigation bar when leaving the fragment
-        val bottomNav: BottomNavigationView? = activity?.findViewById(R.id.nav_view)
-        bottomNav?.visibility = View.VISIBLE
     }
-
 }

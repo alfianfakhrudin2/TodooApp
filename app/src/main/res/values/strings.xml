@@ -55,4 +55,34 @@
         <item>Terry George</item>
     </string-array>
 
+    <string-array name="desc_notifikasi">
+        <item>Sistem Pakar deadline in 5 days!!!</item>
+        <item>task added successfully</item>
+        <item>Pemrograman web lanjut not yet completed, \ndeadline remaining 7 days !!!</item>
+        <item>English successfully completed</item>
+        <item>Arash Buana was successfully added as friend</item>
+        <item>Fisika Penalaran deadline in 2 days!!!</item>
+    </string-array>
+
+    <string-array name="desc_task">
+        <item>Acimah Sidauruk</item>
+        <item>Eli Pujastuti</item>
+        <item>Irma Rofni Wulandari</item>
+        <item>Rosdi Ummar</item>
+    </string-array>
+
+    <string-array name="title_task">
+        <item>Sistem Pakar</item>
+        <item>Statistika</item>
+        <item>Pemrograman \nWeb Lanjut</item>
+        <item>Pemrograman Mobile</item>
+    </string-array>
+
+    <string-array name="presentes_task">
+        <item>50%</item>
+        <item>60%</item>
+        <item>40%</item>
+        <item>70%</item>
+    </string-array>
+
 </resources>

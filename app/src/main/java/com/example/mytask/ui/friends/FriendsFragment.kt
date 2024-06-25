@@ -53,17 +53,17 @@ class FriendsFragment : Fragment() {
         val dataPhotos = resources.obtainTypedArray(R.array.data_photo_friends)
         val dataTitles = resources.getStringArray(R.array.name_friends)
 
-        val listKursus = ArrayList<modelFriends>()
+        val listFriends = ArrayList<modelFriends>()
         for (i in dataTitles.indices) {
             val kursus = modelFriends(
                 dataPhotos.getResourceId(i, -1),
                 dataTitles[i],
             )
-            listKursus.add(kursus)
+            listFriends.add(kursus)
         }
         // Recycle the typed array
         dataPhotos.recycle()
-        return listKursus
+        return listFriends
     }
 
     private fun addFriendsFragment() {

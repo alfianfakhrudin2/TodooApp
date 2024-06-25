@@ -71,12 +71,4 @@ class newGroupFragment : Fragment() {
         return listKursus
     }
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
-
-        // Show the bottom navigation bar when leaving the fragment
-        val bottomNav: BottomNavigationView? = activity?.findViewById(R.id.nav_view)
-        bottomNav?.visibility = View.VISIBLE
-    }
 }
