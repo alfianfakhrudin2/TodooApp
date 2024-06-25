@@ -6,8 +6,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.profile.ProfileFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/profile_image"
         android:layout_width="199dp"
@@ -38,6 +36,7 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/myEmail"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="350dp"
         android:layout_height="50dp"
         android:layout_marginStart="32dp"
@@ -64,6 +63,7 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/myIds"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="350dp"
         android:layout_height="50dp"
         android:layout_marginStart="32dp"

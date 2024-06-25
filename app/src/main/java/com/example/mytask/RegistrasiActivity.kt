@@ -24,45 +24,50 @@ class RegistrasiActivity : AppCompatActivity() {
         setContentView(binding.root)
         supportActionBar?.hide()
 
-        binding.signupButton.setOnClickListener {
-            if (binding.edtGmail.text.toString().isNotEmpty() && binding.passwordEditTextSignup.text.toString().isNotEmpty() && binding.edtId.text.toString().isNotEmpty()) {
-                processRegister()
-            } else {
-                Toast.makeText(this, "Isi semua kolom", Toast.LENGTH_SHORT).show()
-            }
+//        binding.signupButton.setOnClickListener {
+//            if (binding.edtGmail.text.toString().isNotEmpty() && binding.passwordEditTextSignup.text.toString().isNotEmpty() && binding.edtId.text.toString().isNotEmpty()) {
+//                processRegister()
+//            } else {
+//                Toast.makeText(this, "Isi semua kolom", Toast.LENGTH_SHORT).show()
+//            }
+//        }
+
+        binding.signupButton.setOnClickListener{
+            startActivity(Intent(this, LoginActivity::class.java))
         }
+
         binding.txtLogin.setOnClickListener {
             startActivity(Intent(this, LoginActivity::class.java))
         }
 
     }
 
-    private fun processRegister() {
-        val email = binding.edtGmail.text.toString()
-        val password = binding.passwordEditTextSignup.text.toString()
-        val id = binding.edtId.text.toString()
-
-        // Registrasi ke Firebase
-        firebaseAuth.createUserWithEmailAndPassword(email, password)
-            .addOnCompleteListener { task ->
-                if (task.isSuccessful) {
-                    // Registrasi sukses
-
-                    val userUpdateProfile  = UserProfileChangeRequest.Builder()
-                        .setDisplayName(id)
-                        .build()
-                    val user = task.result.user
-                    user!!.updateProfile(userUpdateProfile)
-                        .addOnCompleteListener { task ->
-                            if (task.isSuccessful) {
-                                Toast.makeText(this, "Registrasi Berhasil", Toast.LENGTH_SHORT).show()
-                                startActivity(Intent(this, LoginActivity::class.java))
-                            }
-                        }
-                } else {
-                    // Registrasi gagal
-                    Toast.makeText(this, "Registrasi Gagal", Toast.LENGTH_SHORT).show()
-                }
-            }
-    }
+//    private fun processRegister() {
+//        val email = binding.edtGmail.text.toString()
+//        val password = binding.passwordEditTextSignup.text.toString()
+//        val id = binding.edtId.text.toString()
+//
+//        // Registrasi ke Firebase
+//        firebaseAuth.createUserWithEmailAndPassword(email, password)
+//            .addOnCompleteListener { task ->
+//                if (task.isSuccessful) {
+//                    // Registrasi sukses
+//
+//                    val userUpdateProfile  = UserProfileChangeRequest.Builder()
+//                        .setDisplayName(id)
+//                        .build()
+//                    val user = task.result.user
+//                    user!!.updateProfile(userUpdateProfile)
+//                        .addOnCompleteListener { task ->
+//                            if (task.isSuccessful) {
+//                                Toast.makeText(this, "Registrasi Berhasil", Toast.LENGTH_SHORT).show()
+//                                startActivity(Intent(this, LoginActivity::class.java))
+//                            }
+//                        }
+//                } else {
+//                    // Registrasi gagal
+//                    Toast.makeText(this, "Registrasi Gagal", Toast.LENGTH_SHORT).show()
+//                }
+//            }
+//    }
 }
