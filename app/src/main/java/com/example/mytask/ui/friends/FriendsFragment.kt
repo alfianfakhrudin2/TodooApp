@@ -31,10 +31,7 @@ class FriendsFragment : Fragment() {
 
         // Initialize RecyclerView adapter
         val friendsAdapter = Friends_Adapter(requireActivity(), getListFriends(), object : Friends_Adapter.OnItemClickListener {
-            override fun onItemClick(item: modelFriends) {
-                // Handle item click
-                // For example, navigate to a detailed view of the friend
-            }
+            override fun onItemClick(item: modelFriends) {}
         })
         binding.rvfriends.adapter = friendsAdapter
 

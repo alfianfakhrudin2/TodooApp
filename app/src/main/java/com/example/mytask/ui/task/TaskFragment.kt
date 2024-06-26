@@ -27,8 +27,6 @@ class TaskFragment : Fragment() {
     private var _binding: FragmentTaskBinding? = null
     private val binding get() = _binding!!
 
-//    private lateinit var taskViewModel: TaskViewModel
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -40,17 +38,9 @@ class TaskFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-//        taskViewModel = ViewModelProvider(this).get(TaskViewModel::class.java)
-//        val textView: TextView = binding.textTask
-//        taskViewModel.text.observe(viewLifecycleOwner) {
-//            textView.text = it
-//        }
 
         val taskAdapter = Task_Adapter(requireActivity(), getListTask(), object : Task_Adapter.OnItemClickListener {
-            override fun onItemClick(item: modelTask) {
-                // Handle item click
-                // For example, navigate to a detailed view of the friend
-            }
+            override fun onItemClick(item: modelTask) {}
         })
 
         binding.rvTask.adapter = taskAdapter

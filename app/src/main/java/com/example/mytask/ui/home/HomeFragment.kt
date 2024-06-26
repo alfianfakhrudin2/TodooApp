@@ -29,8 +29,6 @@ class HomeFragment : Fragment() {
 
 //    val datePicker = MaterialDatePicker.Builder.datePicker().build()
 
-    // This property is only valid between onCreateView and
-    // onDestroyView.
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -55,20 +53,6 @@ class HomeFragment : Fragment() {
         return root
     }
 
-
-    private fun showDatePicker() {
-        val builder = MaterialDatePicker.Builder.datePicker()
-        builder.setTitleText("Select Date")
-
-        val picker = builder.build()
-
-        picker.addOnPositiveButtonClickListener(
-            MaterialPickerOnPositiveButtonClickListener { selection ->
-                // Handle the selected date
-                val selectedDate = picker.headerText
-                // Do something with the selected date
-            })
-    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
