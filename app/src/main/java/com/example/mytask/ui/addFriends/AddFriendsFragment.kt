@@ -2,6 +2,8 @@ package com.example.mytask.ui.addFriends
 
 import androidx.fragment.app.viewModels
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -39,6 +41,27 @@ class AddFriendsFragment : Fragment() {
         binding.btnBackAddFriends.setOnClickListener {
             FriendsFragment()
         }
+
+        // Di dalam onViewCreated()
+        binding.searchEditText.addTextChangedListener(object : TextWatcher {
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
+
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
+
+            override fun afterTextChanged(s: Editable?) {
+                val searchText = s.toString().trim()
+                if (searchText.isNotEmpty()) {
+                    // Teks tidak kosong, maka tampilkan iv_friends dan btn_logout
+                    binding.ivFriends.visibility = View.VISIBLE
+                    binding.btnLogout.visibility = View.VISIBLE
+                } else {
+                    // Teks kosong, maka sembunyikan iv_friends dan btn_logout
+                    binding.ivFriends.visibility = View.INVISIBLE
+                    binding.btnLogout.visibility = View.INVISIBLE
+                }
+            }
+        })
+
     }
 
     private fun FriendsFragment() {

@@ -52,12 +52,12 @@ dependencies {
     implementation("androidx.navigation:navigation-fragment-ktx:2.7.7")
     implementation("androidx.navigation:navigation-ui-ktx:2.7.7")
     implementation("androidx.legacy:legacy-support-v4:1.0.0")
-    implementation("androidx.fragment:fragment-ktx:1.8.0")
+    implementation("androidx.fragment:fragment-ktx:1.8.1")
     implementation("androidx.recyclerview:recyclerview:1.3.2")
 
     //BUAT FIREBASE AUTH
     // Import the Firebase BoM
-    implementation(platform("com.google.firebase:firebase-bom:33.1.0"))
+    implementation(platform("com.google.firebase:firebase-bom:33.1.1"))
     implementation("com.google.firebase:firebase-auth:23.0.0")
     // When using the BoM, don't specify versions in Firebase dependencies
     implementation("com.google.firebase:firebase-auth-ktx")
@@ -68,6 +68,6 @@ dependencies {
     // https://firebase.google.com/docs/android/setup#available-libraries
 
     testImplementation("junit:junit:4.13.2")
-    androidTestImplementation("androidx.test.ext:junit:1.1.5")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+    androidTestImplementation("androidx.test.ext:junit:1.2.1")
+    androidTestImplementation("androidx.test.espresso:espresso-core:3.6.1")
 }

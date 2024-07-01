@@ -72,8 +72,7 @@
                     android:backgroundTint="@color/shape"
                     android:hint="@string/password"
                     android:inputType="textVisiblePassword"
-                    android:textSize="15sp"
-                     />
+                    android:textSize="15sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout

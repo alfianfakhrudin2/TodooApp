@@ -8,6 +8,7 @@ import com.example.mytask.R
 
 class Horizontal_RecyclerView: RecyclerView.Adapter<Horizontal_RecyclerView.ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_ongoing, parent, false)
         return ViewHolder(view)
     }
@@ -17,7 +18,7 @@ class Horizontal_RecyclerView: RecyclerView.Adapter<Horizontal_RecyclerView.View
     }
 
     override fun getItemCount(): Int {
-        return 25
+        return 10
     }
 
     inner class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {

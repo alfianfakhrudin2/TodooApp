@@ -56,7 +56,9 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
         binding.recyclerViewHorizontal.adapter = Horizontal_RecyclerView()
+
         binding.btnNotifikasi.setOnClickListener {
             NotificationFragment()
         }
